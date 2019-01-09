@@ -1,0 +1,89 @@
+﻿<Page x:Class="Interface.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Interface"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1080"
+      Title="MenuPage">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!--#region Navigation menu-->
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+           
+            <Button VerticalAlignment="Center"
+               
+                Width="180"
+                Margin="0 20 0 0"
+                Content="Date Gramatica" 
+                x:Name="GrammarButton"
+                Click="GrammarButton_Click"/>
+
+            <Button VerticalAlignment="Center" 
+                 Width="180" 
+                    Margin="0 20 0 0"
+                Content="Conditii analiza descendenta" 
+                x:Name="CheckGrammar"
+                Click="CheckGrammar_Click"/>
+
+            <Button VerticalAlignment="Center" 
+                Margin="0 20 0 0" Width="180" 
+                Content="Conditii gramatica LL1" 
+                x:Name="CheckLL1"
+                Click="CheckLL1_Click"/>
+
+            <Button VerticalAlignment="Center" 
+                Margin="0 20 0 0" Width="180" 
+                Content="Tabela Analiza Sintactica" 
+               
+                x:Name="SeeTAB"
+                Click="SeeTAB_Click"/>
+
+            <Button VerticalAlignment="Center" 
+                Margin="0 20 0 0" Width="180" 
+                Content="Verificare Rezultat Analiza" 
+                x:Name="CheckExample"
+                Click="CheckExample_Click"/>
+
+
+
+        </StackPanel>
+
+
+        <!--#endregion-->
+        
+        <!--#region Main content frame-->
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            
+            <!--#region Title-->
+            
+            <TextBlock Text="Analizor lexical" HorizontalAlignment="Center" FontSize="22"/>
+
+            <!--#endregion-->
+            
+            <!--#region Frame content-->
+
+            <Frame Grid.Row="1"
+                   x:Name="mainContentFrame"
+                   NavigationUIVisibility="Hidden"/>
+
+            <!--#endregion-->
+            
+        </Grid>
+        
+        <!--#endregion-->
+        
+    </Grid>
+</Page>
